@@ -6,6 +6,11 @@ body {
     background:black;
 }
 h1{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #697565;
+    background-position: d;
     color: #ECDFCC;
     opacity: .9;
 }
