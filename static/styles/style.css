@@ -1,16 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background:black;
 }
-h1{
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav li {
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #697565;
-    background-position: d;
-    color: #ECDFCC;
-    opacity: .9;
+    margin-right: 10px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+main section {
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 10px;
 }
