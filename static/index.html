@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" data-theme="light">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Arnay Bhatia - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -18,45 +22,120 @@
         </nav>
     </header>
 
-    <main>
-        <section id="home">
-            <h1>Welcome to My Portfolio</h1>
-            <p>This website showcases my projects and skills.</p>
-        </section>
+<main>
+    <section id="home">
+        <h1>Arnay Bhatia</h1>
+        <h2>Leland High School Student</h2>
+        <div class="summary">
+            <p>Passionate about AI and Computer Science. I want to become skilled in the field of AI. I know Python, Java, and JS. I am excited to explore the possibilities of AI and Computer Science. I am interested in research opportunities to explore these fields.</p>
+        </div>
+    </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1: Project Title</h3>
-                <p>Project description.  Add links to code repositories, live demos, etc.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2: Another Project</h3>
-                <p>Another project description. Add links to code repositories, live demos, etc.</p>
-            </div>
-            <!-- Add more project divs as needed -->
-        </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1: Project Title</h3>
+            <p>Project description. Add links to code repositories, live demos, etc.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2: Another Project</h3>
+            <p>Another project description. Add links to code repositories, live demos, etc.</p>
+        </div>
+        <!-- Add more project divs as needed -->
+    </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <!-- Add more skills as needed -->
-            </ul>
-        </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Leland AI Club</h3>
+            <p class="role">Founder and President</p>
+            <p class="duration">December 2022 - Present</p>
+            <p>We learned and taught about different AI algorithms and techniques used in AI, what data you should use and how to clean data, and the use of AI in the real world.</p>
+        </div>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: your_email@example.com</p>
-            <p>LinkedIn: your_linkedin_profile</p>
-            <!-- Add other contact information as needed -->
-        </section>
-    </main>
+        <div class="experience-item">
+            <h3>Bay Math Academy</h3>
+            <p class="role">Co-Founder</p>
+            <p class="duration">May 2023 - Present</p>
+            <p>Bay Math Academy, a registered 501(c)(3) non-profit organization, provides free math workshops for various grade levels, led by experienced high school students.</p>
+        </div>
 
-    <footer>
-        &copy; 2023 My Portfolio. All rights reserved.
-    </footer>
+        <div class="experience-item"></div>
+            <h3>Boy Scout Troop 290</h3>
+            <p class="role">Assistant Senior Patrol Leader</p>
+            <p class="duration">August 2023 - Present</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Boy Scout Troop 290</h3>
+            <p class="role">Patrol Leader</p>
+            <p class="duration">August 2022 - August 2023</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Boy Scout Troop 290</h3>
+            <p class="role">Webmaster</p>
+            <p class="duration">2020 - August 2022</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>FRC 604 Robotics</h3>
+            <p class="role">Webmaster</p>
+            <p class="duration">2022 - Present</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Website Consulting</h3>
+            <p class="role">Website Consultant</p>
+            <p class="duration">June 2023 - August 2023</p>
+        </div>
+    </section>
+
+    <section id="skills"></section>
+        <h2>Top Skills</h2>
+        <ul>
+            <li>Large Language Models (LLM)</li>
+            <li>Co-creation</li>
+            <li>Advertising</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Leland High School</h3>
+            <p>High School Diploma (August 2021 - May 2025)</p>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <p>Python Basics</p>
+    </section>
+
+    <section id="honors-awards">
+        <h2>Honors & Awards</h2>
+        <p>Gold Presidential Volunteer Service Award</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:arnaybhatia@gmail.com">arnaybhatia@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/arnay-bhatia" target="_blank">linkedin.com/in/arnay-bhatia</a></p>
+    </section>
+</main>
+
+<footer>
+    &copy; 2023 Arnay Bhatia. All rights reserved.
+</footer>
+
+<div class="theme-switch">
+    <input type="checkbox" id="switch-theme" />
+    <label for="switch-theme"></label>
+</div>
 </body>
 </html>
+<!-- Fix this website code so that the Top Skills section displays correctly and the copywrite is not displayed at the very edge and looks like its being cut off a bit. make it match the theme of the website. Here is my projects infomration:Projects Local LLM Chatting Local LLM Chatting Dec 2023 - PresentDec 2023 - Present Used llama.cpp, ollama, and Open Web UI to run llama 3 locally with the ability to chat with documents locally. Used llama.cpp, ollama, and Open Web UI to run llama 3 locally with the ability to chat with documents locally. Skills: Bash · Linux · AI Models · Large Language Models (LLM) Skills: Bash · Linux · AI Models · Large Language Models (LLM) Youtube Summarizer Youtube Summarizer May 2023 - PresentMay 2023 - Present Uses YT-DLP, Whisper AI, and Hugging Face AI model to download and summarize a youtube video. Uses YT-DLP, Whisper AI, and Hugging Face AI model to download and summarize a youtube video. Skills: AI Models · Python (Programming Language) · Artificial Intelligence (AI) Skills: AI Models · Python (Programming Language) · Artificial Intelligence (AI) AI Mask Recognizer AI Mask Recognizer Use mask data set and Jetson Nano to train an AI to recognize if a person is wearing a Mask using jetson inference and detect net. Use mask data set and Jetson Nano to train an AI to recognize if a person is wearing a Mask using jetson inference and detect net. Skills: Bash · Terminal · Artificial Intelligence (AI) Skills: Bash · Terminal · Artificial Intelligence (AI) Grades Predictor Grades Predictor Uses a machine learning algorithm written in python to predict if you will do well based on multiple variables using pandas, numpy, and sklearn. AI!
