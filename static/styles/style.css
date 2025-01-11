@@ -199,3 +199,15 @@ section:hover {
 #skills li:hover {
     transform: scale(1.05);
 }
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--current-bg);
+}
+
+.copyright {
+    font-size: 0.9em;
+    opacity: 0.7;
+}
