@@ -47,63 +47,76 @@ body {
 /* Header Styles */
 header {
     background-color: var(--current-header);
-    padding: 20px 0;
+    padding: 15px 30px;
     box-shadow: var(--current-shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-header nav ul {
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Distribute items evenly */
-    align-items: center; /* Vertically align items */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left h1 {
+    font-size: 1.5em;
     margin: 0;
-    padding: 0 20px; /* Add padding to the nav */
+    color: var(--current-text);
 }
 
-header nav li {
-    list-style: none; /* Remove bullet points */
-    margin: 0; /* Remove default margins */
+.nav-center {
+    display: flex;
+    gap: 30px;
 }
 
-header nav h1 {
-    font-size: 2em; /* Adjust size as needed */
-    margin: 0; /* Remove default margins */
-}
-
-header nav a {
+.nav-center a {
     color: var(--current-text);
     text-decoration: none;
     font-weight: 500;
-    padding: 5px 10px; /* Add padding to links */
-    border-radius: 5px; /* Add rounded corners */
-    transition: background-color 0.3s; /* Add transition for hover effect */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-header nav a:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Add subtle hover effect */
-}
-
-header nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
+.nav-center a:hover {
     background-color: var(--current-accent);
-    transition: width 0.3s;
+    color: white;
 }
 
-header nav a:hover::after {
-    width: 100%;
+.nav-right {
+    display: flex;
+    align-items: center;
 }
 
+/* Theme Switch Styles */
 .theme-switch {
-    position: relative; /* Remove fixed positioning */
-    display: inline-block; /* Allow inline placement */
-    margin-left: 20px; /* Add margin for spacing */
+    margin-left: 20px;
+    width: 56px;
+    height: 28px;
+}
+
+.theme-switch label {
+    width: 56px;
+    height: 28px;
+    border: 2px solid var(--current-accent);
+}
+
+.theme-switch label::after {
+    width: 22px;
+    height: 22px;
+}
+
+.theme-switch input:checked + label::after {
+    transform: translateX(26px);
 }
 
 /* Main Content Styles */
