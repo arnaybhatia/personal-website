@@ -56,18 +56,33 @@ header {
 
 header nav ul {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Vertically align items */
     margin: 0;
-    padding: 0;
+    padding: 0 20px; /* Add padding to the nav */
+}
+
+header nav li {
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove default margins */
+}
+
+header nav h1 {
+    font-size: 2em; /* Adjust size as needed */
+    margin: 0; /* Remove default margins */
 }
 
 header nav a {
     color: var(--current-text);
     text-decoration: none;
     font-weight: 500;
-    position: relative;
-    padding: 5px 0;
+    padding: 5px 10px; /* Add padding to links */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+header nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Add subtle hover effect */
 }
 
 header nav a::after {
@@ -83,6 +98,12 @@ header nav a::after {
 
 header nav a:hover::after {
     width: 100%;
+}
+
+.theme-switch {
+    position: relative; /* Remove fixed positioning */
+    display: inline-block; /* Allow inline placement */
+    margin-left: 20px; /* Add margin for spacing */
 }
 
 /* Main Content Styles */
@@ -108,15 +129,6 @@ section:hover {
 }
 
 /* Theme Switch Styles */
-.theme-switch {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-    width: 60px;
-    height: 30px;
-}
-
 .theme-switch input {
     opacity: 0;
     width: 0;
@@ -221,7 +233,7 @@ footer {
 }
 
 #home h2 {
-    font-size: 1.5em;
+    font-size: 1.2em; /* Reduced size */
     font-weight: 500;
     margin-bottom: 1em;
 }
