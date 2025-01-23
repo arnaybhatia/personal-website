@@ -60,6 +60,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px; /* Add fixed height */
 }
 
 .nav-left {
@@ -71,6 +72,16 @@ header nav {
     font-size: 1.5em;
     margin: 0;
     color: var(--current-text);
+}
+
+.nav-left h1 a {
+    color: var(--current-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-left h1 a:hover {
+    color: var(--current-accent);
 }
 
 .nav-center {
@@ -95,57 +106,16 @@ header nav {
 .nav-right {
     display: flex;
     align-items: center;
+    height: 100%; /* Match parent height */
 }
 
 /* Theme Switch Styles */
 .theme-switch {
     margin-left: 20px;
-    width: 56px;
-    height: 28px;
-}
-
-.theme-switch label {
-    width: 56px;
-    height: 28px;
-    border: 2px solid var(--current-accent);
-}
-
-.theme-switch label::after {
-    width: 22px;
-    height: 22px;
-}
-
-.theme-switch input:checked + label::after {
-    transform: translateX(26px);
-}
-
-/* Main Content Styles */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-section {
-    background-color: var(--current-section);
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 40px;
-    box-shadow: var(--current-shadow);
-    transform: translateY(0);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Theme Switch Styles */
-.theme-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+    width: 60px; /* Match label width */
+    height: 30px; /* Match label height */
+    display: flex;
+    align-items: center;
 }
 
 .theme-switch label {
@@ -172,18 +142,49 @@ section:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 12px; /* Reduced from 14px */
+    line-height: 1; /* Added to help center the emoji */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.theme-switch input:checked + label {
-    background-color: #4facfe;
 }
 
 .theme-switch input:checked + label::after {
     content: '☀️';
-    transform: translateX(30px);
+    transform: translateX(27px); /* Adjusted from 29px to 27px */
     background-color: #ffffff;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    background-color: var(--current-section);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: var(--current-shadow);
+    transform: translateY(0);
+    transition: transform 0.3s, box-shadow 0.3s;
+    scroll-margin-top: 80px; /* Add this line to adjust scroll position */
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Theme Switch Styles */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-switch input:checked + label {
+    background-color: #4facfe;
 }
 
 /* Experience Items */
@@ -191,6 +192,16 @@ section:hover {
     border-left: 3px solid var(--current-accent);
     padding-left: 20px;
     margin-bottom: 25px;
+}
+
+.experience-item h3 a {
+    color: var(--current-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.experience-item h3 a:hover {
+    color: var(--current-accent);
 }
 
 .role {
