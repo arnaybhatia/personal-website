@@ -6,9 +6,11 @@
     <title>Arnay Bhatia - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/style.css" />
-    <script src="/scripts/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css" />
+    <meta name="description" content="Arnay Bhatia - Student passionate about AI and Computer Science">
+    <script src="scripts/main.js" defer></script>
 </head>
 <body id="top">
     <header>
@@ -17,15 +19,21 @@
                 <h1><a href="#top">Arnay Bhatia</a></h1>
             </div>
             <div class="nav-center">
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+                <a href="#projects"><i class="fas fa-code-branch fa-sm"></i> Projects</a>
+                <a href="#experience"><i class="fas fa-briefcase fa-sm"></i> Experience</a>
+                <a href="#skills"><i class="fas fa-laptop-code fa-sm"></i> Skills</a>
+                <a href="#contact"><i class="fas fa-envelope fa-sm"></i> Contact</a>
             </div>
             <div class="nav-right">
                 <div class="theme-switch">
                     <input type="checkbox" id="switch-theme" />
                     <label for="switch-theme"></label>
+                    <div class="sun-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="moon-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -33,57 +41,59 @@
 
     <main>
         <section id="home">
-            <h2>Leland High School Student</h2>
+            <h1>Hello, I'm Arnay Bhatia</h1>
+            <h2>Leland High School Student & AI Enthusiast</h2>
             <div class="summary">
-                <p>Passionate about AI and Computer Science. I want to become skilled in the field of AI. I know Python, Java, and JS. I am excited to explore the possibilities of AI and Computer Science. I am interested in research opportunities to explore these fields.</p>
+                <p>Passionate about Artificial Intelligence and Computer Science. I aim to develop expertise in AI technologies and their real-world applications. With proficiency in Python, Java, and JavaScript, I'm excited to explore the possibilities at the intersection of these fields through research opportunities and practical projects.</p>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2><i class="fas fa-code-branch"></i> Projects</h2>
             <div class="experience-item">
-                <h3>Local LLM Chatting</h3>
+                <h3><i class="fas fa-robot"></i> Local LLM Chatting</h3>
                 <p class="duration">Dec 2023 - Present</p>
                 <p>Used llama.cpp, ollama, and Open Web UI to run llama 3 locally with the ability to chat with documents locally.</p>
-                <p>Skills: Bash · Linux · AI Models · Large Language Models (LLM)</p>
+                <p><strong>Skills:</strong> <span class="skill-tag">Bash</span> <span class="skill-tag">Linux</span> <span class="skill-tag">AI Models</span> <span class="skill-tag">Large Language Models (LLM)</span></p>
             </div>
             <div class="experience-item">
-                <h3>Youtube Summarizer</h3>
+                <h3><i class="fab fa-youtube"></i> Youtube Summarizer</h3>
                 <p class="duration">May 2023 - Present</p>
                 <p>Uses YT-DLP, Whisper AI, and Hugging Face AI model to download and summarize a youtube video.</p>
-                <p>Skills: AI Models · Python (Programming Language) · Artificial Intelligence (AI)</p>
+                <p><strong>Skills:</strong> <span class="skill-tag">AI Models</span> <span class="skill-tag">Python</span> <span class="skill-tag">Artificial Intelligence</span></p>
             </div>
             <div class="experience-item">
-                <h3>AI Mask Recognizer</h3>
-                <p class="duration">Use mask data set and Jetson Nano to train an AI to recognize if a person is wearing a Mask using jetson inference and detect net.</p>
-                <p>Skills: Bash · Terminal · Artificial Intelligence (AI)</p>
+                <h3><i class="fas fa-mask-face"></i> AI Mask Recognizer</h3>
+                <p class="duration">August 2022 - December 2022</p>
+                <p>Use mask data set and Jetson Nano to train an AI to recognize if a person is wearing a Mask using jetson inference and detect net.</p>
+                <p><strong>Skills:</strong> <span class="skill-tag">Bash</span> <span class="skill-tag">Terminal</span> <span class="skill-tag">Artificial Intelligence</span></p>
             </div>
             <div class="experience-item">
-                <h3>Grades Predictor</h3>
-                <p class="duration">Uses a machine learning algorithm written in python to predict if you will do well based on multiple variables using pandas, numpy, and sklearn.</p>
-                <p>Skills: AI Models · Python (Programming Language) · Artificial Intelligence (AI)</p>
+                <h3><i class="fas fa-chart-line"></i> Grades Predictor</h3>
+                <p class="duration">January 2023 - March 2023</p>
+                <p>Uses a machine learning algorithm written in python to predict if you will do well based on multiple variables using pandas, numpy, and sklearn.</p>
+                <p><strong>Skills:</strong> <span class="skill-tag">AI Models</span> <span class="skill-tag">Python</span> <span class="skill-tag">Machine Learning</span></p>
             </div>
-            <!-- Add more project divs as needed -->
         </section>
 
         <section id="experience">
-            <h2>Experience</h2>
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
             <div class="experience-item">
-                <h3><a href="https://lelandai.com" target="_blank" rel="noopener noreferrer">Leland AI Club</a></h3>
+                <h3><a href="https://lelandai.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-brain"></i> Leland AI Club</a></h3>
                 <p class="role">Founder and President</p>
                 <p class="duration">December 2022 - Present</p>
                 <p>We learned and taught about different AI algorithms and techniques used in AI, what data you should use and how to clean data, and the use of AI in the real world.</p>
             </div>
 
             <div class="experience-item">
-                <h3><a href="https://baymathacademy.org" target="_blank" rel="noopener noreferrer">Bay Math Academy</a></h3>
+                <h3><a href="https://baymathacademy.org" target="_blank" rel="noopener noreferrer"><i class="fas fa-calculator"></i> Bay Math Academy</a></h3>
                 <p class="role">Co-Founder</p>
                 <p class="duration">May 2023 - Present</p>
                 <p>Bay Math Academy, a registered 501(c)(3) non-profit organization, provides free math workshops for various grade levels, led by experienced high school students.</p>
             </div>
 
             <div class="experience-item">
-                <h3><a href="https://troop290.org" target="_blank" rel="noopener noreferrer">Boy Scout Troop 290</a></h3>
+                <h3><a href="https://troop290.org" target="_blank" rel="noopener noreferrer"><i class="fas fa-campground"></i> Boy Scout Troop 290</a></h3>
                 <div class="scout-roles">
                     <div class="sub-role">
                         <p class="role">Assistant Senior Patrol Leader</p>
@@ -101,32 +111,34 @@
             </div>
 
             <div class="experience-item">
-                <h3><a href="https://604robotics.com" target="_blank" rel="noopener noreferrer">FRC 604 Robotics</a></h3>
+                <h3><a href="https://604robotics.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-robot"></i> FRC 604 Robotics</a></h3>
                 <p class="role">Webmaster</p>
                 <p class="duration">2022 - Present</p>
+                <p>Maintain and update the team's website, implementing new design concepts and ensuring functionality across all platforms.</p>
             </div>
 
             <div class="experience-item">
-                <h3>Website Consulting</h3>
+                <h3><i class="fas fa-desktop"></i> Website Consulting</h3>
                 <p class="role">Website Consultant</p>
                 <p class="duration">June 2023 - August 2023</p>
+                <p>Provided guidance on website development, user experience improvements, and technical implementation to clients.</p>
             </div>
         </section>
 
         <section id="skills">
-            <h2>Top Skills</h2>
+            <h2><i class="fas fa-laptop-code"></i> Top Skills</h2>
             <ul>
-                <li>Large Language Models (LLM)</li>
-                <li>Co-creation</li>
-                <li>Advertising</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>JavaScript</li>
+                <li><i class="fas fa-robot"></i> Large Language Models (LLM)</li>
+                <li><i class="fas fa-users"></i> Co-creation</li>
+                <li><i class="fas fa-ad"></i> Advertising</li>
+                <li><i class="fab fa-python"></i> Python</li>
+                <li><i class="fab fa-java"></i> Java</li>
+                <li><i class="fab fa-js"></i> JavaScript</li>
             </ul>
         </section>
 
         <section id="education">
-            <h2>Education</h2>
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             <div class="education-item">
                 <h3>Leland High School</h3>
                 <p>High School Diploma (August 2021 - May 2025)</p>
@@ -134,18 +146,27 @@
         </section>
 
         <section id="certifications">
-            <h2>Certifications</h2>
-            <p>Python Basics</p>
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <div class="education-item">
+                <h3>Python Basics</h3>
+                <p>Completed comprehensive Python fundamentals training</p>
+            </div>
         </section>
 
         <section id="honors-awards">
-            <h2>Honors & Awards</h2>
-            <p>Gold Presidential Volunteer Service Award</p>
+            <h2><i class="fas fa-award"></i> Honors & Awards</h2>
+            <div class="education-item">
+                <h3>Gold Presidential Volunteer Service Award</h3>
+                <p>Recognized for exceptional community service contributions</p>
+            </div>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/arnay-bhatia" target="_blank">linkedin.com/in/arnay-bhatia</a></p>
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/arnay-bhatia" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/arnaybhatia" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
         </section>
     </main>
 
