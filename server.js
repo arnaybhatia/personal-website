@@ -2,16 +2,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Set correct MIME types
-app.use(express.static('static', {
-    setHeaders: (res, path) => {
-        if (path.endsWith('.css')) {
-            res.setHeader('Content-Type', 'text/css');
-        } else if (path.endsWith('.js')) {
-            res.setHeader('Content-Type', 'application/javascript');
-        }
-    }
-}));
+// Serve static files from the 'static' directory
+app.use(express.static(path.join(__dirname, 'static')));
 
 // Trust proxy for secure headers
 app.set('trust proxy', 1);
@@ -26,11 +18,7 @@ app.use((req, res, next) => {
 
 // Handle all routes
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'static', 'index.html'), {
-        headers: {
-            'Content-Type': 'text/html'
-        }
-    });
+    res.sendFile(path.join(__dirname, 'static', 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
