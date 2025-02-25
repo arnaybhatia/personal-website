@@ -2,13 +2,10 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from the 'static' directory
 app.use(express.static(path.join(__dirname, 'static')));
 
-// Trust proxy for secure headers
 app.set('trust proxy', 1);
 
-// Redirect HTTP to HTTPS in production
 app.use((req, res, next) => {
     if (process.env.NODE_ENV === 'production' && !req.secure) {
         return res.redirect('https://' + req.headers.host + req.url);
@@ -16,7 +13,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// Handle all routes
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'static', 'index.html'));
 });
