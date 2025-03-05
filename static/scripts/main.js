@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
         html.classList.add('theme-transition');
         
         setTimeout(() => {
-            html.setAttribute('data-theme', theme);
+            if (theme === 'dark') {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
             localStorage.setItem('theme', theme);
             
             setTimeout(() => {
@@ -18,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentTheme = localStorage.getItem('theme') || 
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     
-    html.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') {
+        html.classList.add('dark');
+    }
     toggleSwitch.checked = currentTheme === 'dark';
 
     toggleSwitch.addEventListener('change', function() {
@@ -37,6 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
+    // Mobile menu toggle
+    const mobileMenuButton = document.querySelector('button.md\\:hidden');
+    const mobileMenu = document.querySelector('header .md\\:hidden');
+    
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon based on menu state
+            const icon = mobileMenuButton.querySelector('i');
+            if (icon) {
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            }
+        });
+    }
+    
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -56,9 +85,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
             }
+            
+            // Close mobile menu when clicking a link
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
     });
     
+    // Animation on scroll
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -68,47 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-4');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
     document.querySelectorAll('section').forEach(section => {
-        section.style.opacity = 0;
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        section.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700', 'ease-in-out');
         observer.observe(section);
     });
-    
-    const style = document.createElement('style');
-    style.textContent = `
-        .theme-transition {
-            transition: background-color 0.5s ease, color 0.5s ease;
-        }
-        
-        .theme-transition * {
-            transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
-        }
-        
-        .skill-tag {
-            display: inline-block;
-            background-color: rgba(53, 152, 219, 0.1);
-            color: var(--current-accent);
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            margin-right: 6px;
-            margin-bottom: 6px;
-            transition: all 0.3s ease;
-        }
-        
-        .skill-tag:hover {
-            background-color: var(--current-accent);
-            color: white;
-            transform: translateY(-2px);
-        }
-    `;
-    document.head.appendChild(style);
 });

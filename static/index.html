@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" data-theme="light">
+<html lang="en-US" class="scroll-smooth">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,166 +12,288 @@
     <meta name="description" content="Arnay Bhatia - Student passionate about AI and Computer Science">
     <script src="scripts/main.js" defer></script>
 </head>
-<body id="top">
-    <header>
-        <nav>
-            <div class="nav-left">
-                <h1><a href="#top">Arnay Bhatia</a></h1>
+<body id="top" class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans antialiased">
+    <header class="sticky top-0 z-50 bg-surface-light dark:bg-surface-dark shadow-light dark:shadow-dark">
+        <nav class="max-w-6xl mx-auto flex justify-between items-center h-16 px-4 md:px-6">
+            <div class="flex items-center">
+                <h1 class="text-xl font-bold">
+                    <a href="#top" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors">Arnay Bhatia</a>
+                </h1>
             </div>
-            <div class="nav-center">
-                <a href="#projects"><i class="fas fa-code-branch fa-sm"></i> Projects</a>
-                <a href="#experience"><i class="fas fa-briefcase fa-sm"></i> Experience</a>
-                <a href="#skills"><i class="fas fa-laptop-code fa-sm"></i> Skills</a>
-                <a href="#contact"><i class="fas fa-envelope fa-sm"></i> Contact</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#projects" class="font-medium hover:text-primary-light dark:hover:text-primary-dark px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-code-branch fa-sm mr-1"></i> Projects
+                </a>
+                <a href="#experience" class="font-medium hover:text-primary-light dark:hover:text-primary-dark px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-briefcase fa-sm mr-1"></i> Experience
+                </a>
+                <a href="#skills" class="font-medium hover:text-primary-light dark:hover:text-primary-dark px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-laptop-code fa-sm mr-1"></i> Skills
+                </a>
+                <a href="#contact" class="font-medium hover:text-primary-light dark:hover:text-primary-dark px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-envelope fa-sm mr-1"></i> Contact
+                </a>
             </div>
-            <div class="nav-right">
-                <div class="theme-switch">
-                    <input type="checkbox" id="switch-theme" />
-                    <label for="switch-theme"></label>
-                    <div class="sun-icon">
+            <div class="flex items-center">
+                <div class="theme-switch relative inline-block w-16 h-8 cursor-pointer">
+                    <input type="checkbox" id="switch-theme" class="sr-only" />
+                    <label for="switch-theme" class="block h-8 overflow-hidden rounded-full bg-gray-800 dark:bg-primary-light cursor-pointer">
+                        <span class="sr-only">Toggle Dark Mode</span>
+                    </label>
+                    <div class="sun-icon absolute right-2 top-1/2 -translate-y-1/2 text-yellow-300 dark:opacity-100 opacity-0 transition-opacity">
                         <i class="fas fa-sun"></i>
                     </div>
-                    <div class="moon-icon">
+                    <div class="moon-icon absolute left-2 top-1/2 -translate-y-1/2 text-white dark:opacity-0 opacity-100 transition-opacity">
                         <i class="fas fa-moon"></i>
                     </div>
                 </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden ml-4 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
+        <!-- Mobile menu (hidden by default) -->
+        <div class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#projects" class="block px-3 py-2 rounded-md font-medium hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fas fa-code-branch fa-sm mr-1"></i> Projects
+                </a>
+                <a href="#experience" class="block px-3 py-2 rounded-md font-medium hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fas fa-briefcase fa-sm mr-1"></i> Experience
+                </a>
+                <a href="#skills" class="block px-3 py-2 rounded-md font-medium hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fas fa-laptop-code fa-sm mr-1"></i> Skills
+                </a>
+                <a href="#contact" class="block px-3 py-2 rounded-md font-medium hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fas fa-envelope fa-sm mr-1"></i> Contact
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="home">
-            <h1>Hello, I'm Arnay Bhatia</h1>
-            <h2>Leland High School Student & AI Enthusiast</h2>
-            <div class="summary">
-                <p>Passionate about Artificial Intelligence and Computer Science. I aim to develop expertise in AI technologies and their real-world applications. With proficiency in Python, Java, and JavaScript, I'm excited to explore the possibilities at the intersection of these fields through research opportunities and practical projects.</p>
+    <main class="max-w-6xl mx-auto px-4 md:px-6 py-8">
+        <section id="home" class="bg-surface-light dark:bg-surface-dark rounded-xl p-8 mb-10 shadow-light dark:shadow-dark transition-transform hover:translate-y-[-5px] duration-300">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-text-light dark:text-text-dark">Hello, I'm Arnay Bhatia</h1>
+            <h2 class="text-xl font-medium mb-6 text-text-light/80 dark:text-text-dark/80">Leland High School Student & AI Enthusiast</h2>
+            <div class="summary max-w-3xl">
+                <p class="text-lg leading-relaxed">Passionate about Artificial Intelligence and Computer Science. I aim to develop expertise in AI technologies and their real-world applications. With proficiency in Python, Java, and JavaScript, I'm excited to explore the possibilities at the intersection of these fields through research opportunities and practical projects.</p>
             </div>
         </section>
 
-        <section id="projects">
-            <h2><i class="fas fa-code-branch"></i> Projects</h2>
-            <div class="experience-item">
-                <h3><i class="fas fa-robot"></i> Local LLM Chatting</h3>
-                <p class="duration">Dec 2023 - Present</p>
-                <p>Used llama.cpp, ollama, and Open Web UI to run llama 3 locally with the ability to chat with documents locally.</p>
-                <p><strong>Skills:</strong> <span class="skill-tag">Bash</span> <span class="skill-tag">Linux</span> <span class="skill-tag">AI Models</span> <span class="skill-tag">Large Language Models (LLM)</span></p>
-            </div>
-            <div class="experience-item">
-                <h3><i class="fab fa-youtube"></i> Youtube Summarizer</h3>
-                <p class="duration">May 2023 - Present</p>
-                <p>Uses YT-DLP, Whisper AI, and Hugging Face AI model to download and summarize a youtube video.</p>
-                <p><strong>Skills:</strong> <span class="skill-tag">AI Models</span> <span class="skill-tag">Python</span> <span class="skill-tag">Artificial Intelligence</span></p>
-            </div>
-            <div class="experience-item">
-                <h3><i class="fas fa-mask-face"></i> AI Mask Recognizer</h3>
-                <p class="duration">August 2022 - December 2022</p>
-                <p>Use mask data set and Jetson Nano to train an AI to recognize if a person is wearing a Mask using jetson inference and detect net.</p>
-                <p><strong>Skills:</strong> <span class="skill-tag">Bash</span> <span class="skill-tag">Terminal</span> <span class="skill-tag">Artificial Intelligence</span></p>
-            </div>
-            <div class="experience-item">
-                <h3><i class="fas fa-chart-line"></i> Grades Predictor</h3>
-                <p class="duration">January 2023 - March 2023</p>
-                <p>Uses a machine learning algorithm written in python to predict if you will do well based on multiple variables using pandas, numpy, and sklearn.</p>
-                <p><strong>Skills:</strong> <span class="skill-tag">AI Models</span> <span class="skill-tag">Python</span> <span class="skill-tag">Machine Learning</span></p>
-            </div>
-        </section>
+        <section id="projects" class="bg-surface-light dark:bg-surface-dark rounded-xl p-8 mb-10 shadow-light dark:shadow-dark transition-transform hover:translate-y-[-5px] duration-300 scroll-mt-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-code-branch mr-2 text-primary-light dark:text-primary-dark"></i> Projects
+            </h2>
+            <div class="space-y-8">
+                <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4 transition-all hover:pl-6 duration-300">
+                    <h3 class="text-xl font-semibold mb-1 flex items-center">
+                        <i class="fas fa-robot mr-2 text-primary-light dark:text-primary-dark"></i> Local LLM Chatting
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Dec 2023 - Present</p>
+                    <p class="mb-3">Used llama.cpp, ollama, and Open Web UI to run llama 3 locally with the ability to chat with documents locally.</p>
+                    <p><strong>Skills:</strong> 
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Bash</span>
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Linux</span>
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">AI Models</span>
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Large Language Models (LLM)</span>
+                    </p>
+                </div>
 
-        <section id="experience">
-            <h2><i class="fas fa-briefcase"></i> Experience</h2>
-            <div class="experience-item">
-                <h3><a href="https://lelandai.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-brain"></i> Leland AI Club</a></h3>
-                <p class="role">Founder and President</p>
-                <p class="duration">December 2022 - Present</p>
-                <p>We learned and taught about different AI algorithms and techniques used in AI, what data you should use and how to clean data, and the use of AI in the real world.</p>
-            </div>
+                <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4 transition-all hover:pl-6 duration-300">
+                    <h3 class="text-xl font-semibold mb-1 flex items-center">
+                        <i class="fab fa-youtube mr-2 text-primary-light dark:text-primary-dark"></i> Youtube Summarizer
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">May 2023 - Present</p>
+                    <p class="mb-3">Uses YT-DLP, Whisper AI, and Hugging Face AI model to download and summarize a youtube video.</p>
+                    <p><strong>Skills:</strong> 
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">AI Models</span>
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Python</span>
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Artificial Intelligence</span>
+                    </p>
+                </div>
 
-            <div class="experience-item">
-                <h3><a href="https://baymathacademy.org" target="_blank" rel="noopener noreferrer"><i class="fas fa-calculator"></i> Bay Math Academy</a></h3>
-                <p class="role">Co-Founder</p>
-                <p class="duration">May 2023 - Present</p>
-                <p>Bay Math Academy, a registered 501(c)(3) non-profit organization, provides free math workshops for various grade levels, led by experienced high school students.</p>
-            </div>
+                <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4 transition-all hover:pl-6 duration-300">
+                    <h3 class="text-xl font-semibold mb-1 flex items-center">
+                        <i class="fas fa-mask-face mr-2 text-primary-light dark:text-primary-dark"></i> AI Mask Recognizer
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">August 2022 - December 2022</p>
+                    <p class="mb-3">Use mask data set and Jetson Nano to train an AI to recognize if a person is wearing a Mask using jetson inference and detect net.</p>
+                    <p><strong>Skills:</strong> 
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Bash</span>
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Terminal</span>
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Artificial Intelligence</span>
+                    </p>
+                </div>
 
-            <div class="experience-item">
-                <h3><a href="https://troop290.org" target="_blank" rel="noopener noreferrer"><i class="fas fa-campground"></i> Boy Scout Troop 290</a></h3>
-                <div class="scout-roles">
-                    <div class="sub-role">
-                        <p class="role">Assistant Senior Patrol Leader</p>
-                        <p class="duration">August 2023 - August 2024</p>
-                    </div>
-                    <div class="sub-role">
-                        <p class="role">Patrol Leader</p>
-                        <p class="duration">August 2022 - August 2023</p>
-                    </div>
-                    <div class="sub-role">
-                        <p class="role">Webmaster</p>
-                        <p class="duration">2020 - August 2022</p>
-                    </div>
+                <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4 transition-all hover:pl-6 duration-300">
+                    <h3 class="text-xl font-semibold mb-1 flex items-center">
+                        <i class="fas fa-chart-line mr-2 text-primary-light dark:text-primary-dark"></i> Grades Predictor
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">January 2023 - March 2023</p>
+                    <p class="mb-3">Uses a machine learning algorithm written in python to predict if you will do well based on multiple variables using pandas, numpy, and sklearn.</p>
+                    <p><strong>Skills:</strong> 
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">AI Models</span>
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Python</span>
+                        <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">Machine Learning</span>
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <div class="experience-item">
-                <h3><a href="https://604robotics.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-robot"></i> FRC 604 Robotics</a></h3>
-                <p class="role">Webmaster</p>
-                <p class="duration">2022 - Present</p>
-                <p>Maintain and update the team's website, implementing new design concepts and ensuring functionality across all platforms.</p>
-            </div>
+        <section id="experience" class="bg-surface-light dark:bg-surface-dark rounded-xl p-8 mb-10 shadow-light dark:shadow-dark transition-transform hover:translate-y-[-5px] duration-300 scroll-mt-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-briefcase mr-2 text-primary-light dark:text-primary-dark"></i> Experience
+            </h2>
+            
+            <div class="space-y-8">
+                <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4 transition-all hover:pl-6 duration-300">
+                    <h3 class="text-xl font-semibold mb-1">
+                        <a href="https://lelandai.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors flex items-center">
+                            <i class="fas fa-brain mr-2 text-primary-light dark:text-primary-dark"></i> Leland AI Club
+                        </a>
+                    </h3>
+                    <p class="text-primary-light dark:text-primary-dark font-medium mb-1">Founder and President</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">December 2022 - Present</p>
+                    <p>We learned and taught about different AI algorithms and techniques used in AI, what data you should use and how to clean data, and the use of AI in the real world.</p>
+                </div>
 
-            <div class="experience-item">
-                <h3><i class="fas fa-desktop"></i> Website Consulting</h3>
-                <p class="role">Website Consultant</p>
-                <p class="duration">June 2023 - August 2023</p>
-                <p>Provided guidance on website development, user experience improvements, and technical implementation to clients.</p>
+                <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4 transition-all hover:pl-6 duration-300">
+                    <h3 class="text-xl font-semibold mb-1">
+                        <a href="https://baymathacademy.org" target="_blank" rel="noopener noreferrer" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors flex items-center">
+                            <i class="fas fa-calculator mr-2 text-primary-light dark:text-primary-dark"></i> Bay Math Academy
+                        </a>
+                    </h3>
+                    <p class="text-primary-light dark:text-primary-dark font-medium mb-1">Co-Founder</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">May 2023 - Present</p>
+                    <p>Bay Math Academy, a registered 501(c)(3) non-profit organization, provides free math workshops for various grade levels, led by experienced high school students.</p>
+                </div>
+
+                <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4 transition-all hover:pl-6 duration-300">
+                    <h3 class="text-xl font-semibold mb-1">
+                        <a href="https://troop290.org" target="_blank" rel="noopener noreferrer" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors flex items-center">
+                            <i class="fas fa-campground mr-2 text-primary-light dark:text-primary-dark"></i> Boy Scout Troop 290
+                        </a>
+                    </h3>
+                    <div class="space-y-2 mt-1">
+                        <div>
+                            <p class="text-primary-light dark:text-primary-dark font-medium mb-0">Assistant Senior Patrol Leader</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">August 2023 - August 2024</p>
+                        </div>
+                        <div>
+                            <p class="text-primary-light dark:text-primary-dark font-medium mb-0">Patrol Leader</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">August 2022 - August 2023</p>
+                        </div>
+                        <div>
+                            <p class="text-primary-light dark:text-primary-dark font-medium mb-0">Webmaster</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">2020 - August 2022</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4 transition-all hover:pl-6 duration-300">
+                    <h3 class="text-xl font-semibold mb-1">
+                        <a href="https://604robotics.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary-light dark:hover:text-primary-dark transition-colors flex items-center">
+                            <i class="fas fa-robot mr-2 text-primary-light dark:text-primary-dark"></i> FRC 604 Robotics
+                        </a>
+                    </h3>
+                    <p class="text-primary-light dark:text-primary-dark font-medium mb-1">Webmaster</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">2022 - Present</p>
+                    <p>Maintain and update the team's website, implementing new design concepts and ensuring functionality across all platforms.</p>
+                </div>
+
+                <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4 transition-all hover:pl-6 duration-300">
+                    <h3 class="text-xl font-semibold mb-1 flex items-center">
+                        <i class="fas fa-desktop mr-2 text-primary-light dark:text-primary-dark"></i> Website Consulting
+                    </h3>
+                    <p class="text-primary-light dark:text-primary-dark font-medium mb-1">Website Consultant</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">June 2023 - August 2023</p>
+                    <p>Provided guidance on website development, user experience improvements, and technical implementation to clients.</p>
+                </div>
             </div>
         </section>
 
-        <section id="skills">
-            <h2><i class="fas fa-laptop-code"></i> Top Skills</h2>
-            <ul>
-                <li><i class="fas fa-robot"></i> Large Language Models (LLM)</li>
-                <li><i class="fas fa-users"></i> Co-creation</li>
-                <li><i class="fas fa-ad"></i> Advertising</li>
-                <li><i class="fab fa-python"></i> Python</li>
-                <li><i class="fab fa-java"></i> Java</li>
-                <li><i class="fab fa-js"></i> JavaScript</li>
-            </ul>
-        </section>
-
-        <section id="education">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="education-item">
-                <h3>Leland High School</h3>
-                <p>High School Diploma (August 2021 - May 2025)</p>
+        <section id="skills" class="bg-surface-light dark:bg-surface-dark rounded-xl p-8 mb-10 shadow-light dark:shadow-dark transition-transform hover:translate-y-[-5px] duration-300 scroll-mt-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-laptop-code mr-2 text-primary-light dark:text-primary-dark"></i> Top Skills
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-light dark:shadow-dark hover:scale-105 transition-transform">
+                    <i class="fas fa-robot text-xl text-primary-light dark:text-primary-dark mb-2"></i>
+                    <h3 class="font-medium">Large Language Models (LLM)</h3>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-light dark:shadow-dark hover:scale-105 transition-transform">
+                    <i class="fas fa-users text-xl text-primary-light dark:text-primary-dark mb-2"></i>
+                    <h3 class="font-medium">Co-creation</h3>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-light dark:shadow-dark hover:scale-105 transition-transform">
+                    <i class="fas fa-ad text-xl text-primary-light dark:text-primary-dark mb-2"></i>
+                    <h3 class="font-medium">Advertising</h3>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-light dark:shadow-dark hover:scale-105 transition-transform">
+                    <i class="fab fa-python text-xl text-primary-light dark:text-primary-dark mb-2"></i>
+                    <h3 class="font-medium">Python</h3>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-light dark:shadow-dark hover:scale-105 transition-transform">
+                    <i class="fab fa-java text-xl text-primary-light dark:text-primary-dark mb-2"></i>
+                    <h3 class="font-medium">Java</h3>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-light dark:shadow-dark hover:scale-105 transition-transform">
+                    <i class="fab fa-js text-xl text-primary-light dark:text-primary-dark mb-2"></i>
+                    <h3 class="font-medium">JavaScript</h3>
+                </div>
             </div>
         </section>
 
-        <section id="certifications">
-            <h2><i class="fas fa-certificate"></i> Certifications</h2>
-            <div class="education-item">
-                <h3>Python Basics</h3>
-                <p>Completed comprehensive Python fundamentals training</p>
+        <section id="education" class="bg-surface-light dark:bg-surface-dark rounded-xl p-8 mb-10 shadow-light dark:shadow-dark transition-transform hover:translate-y-[-5px] duration-300 scroll-mt-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-graduation-cap mr-2 text-primary-light dark:text-primary-dark"></i> Education
+            </h2>
+            <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4">
+                <h3 class="text-xl font-semibold mb-1">Leland High School</h3>
+                <p class="text-gray-600 dark:text-gray-400">High School Diploma (August 2021 - May 2025)</p>
             </div>
         </section>
 
-        <section id="honors-awards">
-            <h2><i class="fas fa-award"></i> Honors & Awards</h2>
-            <div class="education-item">
-                <h3>Gold Presidential Volunteer Service Award</h3>
-                <p>Recognized for exceptional community service contributions</p>
+        <section id="certifications" class="bg-surface-light dark:bg-surface-dark rounded-xl p-8 mb-10 shadow-light dark:shadow-dark transition-transform hover:translate-y-[-5px] duration-300 scroll-mt-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-certificate mr-2 text-primary-light dark:text-primary-dark"></i> Certifications
+            </h2>
+            <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4">
+                <h3 class="text-xl font-semibold mb-1">Python Basics</h3>
+                <p class="text-gray-600 dark:text-gray-400">Completed comprehensive Python fundamentals training</p>
             </div>
         </section>
 
-        <section id="contact">
-            <h2><i class="fas fa-envelope"></i> Contact</h2>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/arnay-bhatia" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/arnaybhatia" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <section id="honors-awards" class="bg-surface-light dark:bg-surface-dark rounded-xl p-8 mb-10 shadow-light dark:shadow-dark transition-transform hover:translate-y-[-5px] duration-300 scroll-mt-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-award mr-2 text-primary-light dark:text-primary-dark"></i> Honors & Awards
+            </h2>
+            <div class="border-l-4 border-primary-light dark:border-primary-dark pl-4">
+                <h3 class="text-xl font-semibold mb-1">Gold Presidential Volunteer Service Award</h3>
+                <p class="text-gray-600 dark:text-gray-400">Recognized for exceptional community service contributions</p>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-surface-light dark:bg-surface-dark rounded-xl p-8 mb-10 shadow-light dark:shadow-dark transition-transform hover:translate-y-[-5px] duration-300 scroll-mt-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-envelope mr-2 text-primary-light dark:text-primary-dark"></i> Contact
+            </h2>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://www.linkedin.com/in/arnay-bhatia" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-background-light dark:bg-background-dark rounded-lg shadow-light dark:shadow-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fab fa-linkedin text-xl text-[#0077b5]"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/arnaybhatia" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-background-light dark:bg-background-dark rounded-lg shadow-light dark:shadow-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                    <span>GitHub</span>
+                </a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="copyright">
+    <footer class="bg-background-light dark:bg-background-dark py-6 text-center">
+        <div class="text-sm text-gray-600 dark:text-gray-400">
             &copy; 2023 Arnay Bhatia. All rights reserved.
         </div>
     </footer>
